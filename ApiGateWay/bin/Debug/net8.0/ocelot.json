@@ -1,0 +1,35 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5140"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/product/getallproducts",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/product/getallproducts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5255
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/product/addproduct",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/product/addproduct",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5127
+        }
+      ]
+    }
+  ]
+}
